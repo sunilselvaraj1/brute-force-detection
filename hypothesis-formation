@@ -1,0 +1,29 @@
+🎯 Hypothesis
+🧠 Hypothesis Statement
+During a routine maintenance window, certain devices (VMs) within the shared services cluster — responsible for DNS, DHCP, and Domain Services — were unintentionally exposed to the public internet.
+Given the lack of account lockout policies on older systems, it is hypothesized that external threat actors may have:
+
+🚨 Attempted brute-force login attacks from public IP addresses.
+
+🔓 Successfully authenticated on vulnerable devices after multiple failed attempts.
+
+📌 Assumptions
+🌐 Devices were exposed without intended firewall restrictions (publicly reachable IPs).
+
+🚫 No lockout thresholds were configured for failed login attempts.
+
+🛡️ Remote logins from external IPs are considered highly suspicious unless whitelisted.
+
+⚠️ Risk Impact
+🛠️ Unauthorized access to critical infrastructure.
+
+🔀 Lateral movement potential into internal network segments.
+
+🧩 Compromise of DNS, DHCP, and domain management functions could lead to large-scale disruptions.
+
+🎯 Hunt Goals
+🔍 Detect external brute-force attempts (high failed login counts).
+
+📈 Identify successful external logins following brute-force attempts.
+
+🖥️ Determine if any sensitive assets (domain controllers, DNS servers) were compromised.
