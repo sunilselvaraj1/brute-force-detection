@@ -16,7 +16,7 @@ During routine maintenance, a misconfiguration led to devices within a shared se
 
 ## 🔍 Hunting Methodology
 Following a structured threat hunting process:
-1. Hypothesis Formation
+1. [Hypothesis Formation](https://github.com/sunilselvaraj1/brute-force-detection/hypothesis-formation)
 2. Data Collection
 3. Data Enrichment
 4. KQL Querying and Analysis
